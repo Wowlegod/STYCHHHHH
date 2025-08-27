@@ -7,6 +7,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import ElementNotInteractableException, NoSuchElementException
 from datetime import datetime, timedelta
 from twilio.rest import Client
+from selenium.webdriver.chrome.options import Options
 
 options = Options()
 options.add_argument("--headless=new")  # mode sans interface
@@ -135,3 +136,4 @@ except Exception as e:
     print(f"Erreur lors de la récupération des créneaux : {e}")
 # 8. Fermer le navigateur
 driver.quit()
+
